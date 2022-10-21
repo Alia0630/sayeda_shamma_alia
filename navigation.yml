@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Current Research"
+    url: /current_research/
+  - title: "Projects"
+    url: /projects/
+  - title: "Publications"
+    url: /publications/
+  - title: "Travelling"
+    url: /travelling/
+  - title: "Contact"
+    url: /contact/
