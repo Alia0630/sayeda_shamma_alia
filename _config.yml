@@ -6,8 +6,8 @@ title                    : "Personal Website"
 title_separator          : "-"
 name                     : "Sayeda Shamma Alia"
 description              : "Personal website for Sayeda Shamma Alia"
-url                      : "https://alia0630.github.io/sayeda_shamma_alia/"
-baseurl                  : "/"
+url                      : "https://alia0630.github.io"
+baseurl                  :"/sayeda_shamma_alia"
 repository               : "sayeda_shamma_alia"
 
 
