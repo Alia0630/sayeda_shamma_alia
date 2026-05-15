@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/index.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/about.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/leadership.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/research.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/publications.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/projects.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/beyond.html</loc></url>
-  <url><loc>https://alia0630.github.io/sayeda_shamma_alia/contact.html</loc></url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/index.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/about.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/leadership.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/research.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/publications.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/projects.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/beyond.html</loc>
+  </url>
+  <url>
+    <loc>https://alia0630.github.io/sayeda_shamma_alia/contact.html</loc>
+  </url>
 </urlset>
