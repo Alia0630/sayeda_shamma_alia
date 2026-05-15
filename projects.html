@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Sayeda Shamma Alia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #1a1a2e; --soft: #4a4a6a; --muted: #8888aa;
+  --teal: #0e9f7e; --teal-light: #e1f5ee; --teal-mid: #1d9e75;
+  --paper: #fafaf7; --cream: #f4f0eb; --border: rgba(30,30,60,0.1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: "DM Sans", sans-serif; background: var(--paper); color: var(--ink); line-height: 1.7; padding-top: 64px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,247,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 64px; gap: 1rem; }
+.nav-name { font-family: "DM Serif Display", serif; font-size: 1.05rem; color: var(--ink); text-decoration: none; margin-right: auto; white-space: nowrap; }
+.nav-links { display: flex; gap: 0; }
+.nav-links a { font-size: 0.82rem; color: var(--soft); text-decoration: none; padding: 0.45rem 0.9rem; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+.nav-links a:hover { color: var(--teal); background: var(--teal-light); }
+.nav-links a.active { color: var(--teal); font-weight: 500; background: var(--teal-light); }
+.hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+
+.page { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+.page-wide { max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+
+.section-label { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--teal); text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-label::before { content: ""; display: block; width: 1.5rem; height: 1px; background: var(--teal); }
+h1 { font-family: "DM Serif Display", serif; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.15; color: var(--ink); margin-bottom: 1rem; }
+h1 em { font-style: italic; color: var(--teal); }
+h2 { font-family: "DM Serif Display", serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--ink); margin-bottom: 1rem; }
+h3 { font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
+p.lead { font-size: 1.05rem; color: var(--soft); font-weight: 300; line-height: 1.85; margin-bottom: 1rem; max-width: 640px; }
+
+.btn-primary { display: inline-block; background: var(--ink); color: #fff; padding: 0.75rem 1.75rem; border-radius: 2rem; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
+.btn-primary:hover { background: var(--teal); }
+.btn-outline { display: inline-block; border: 1px solid var(--border); color: var(--soft); padding: 0.75rem 1.75rem; border-radius: 2rem; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; }
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+/* CARDS */
+.card { background: #fff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border); }
+.card h3 { margin-bottom: 0.5rem; }
+.card p { font-size: 0.9rem; color: var(--soft); font-weight: 300; }
+.tag { font-size: 0.72rem; padding: 0.2rem 0.65rem; border-radius: 2rem; background: var(--teal-light); color: var(--teal-mid); font-weight: 500; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+/* FACT CARDS */
+.fact-card { background: var(--cream); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid var(--border); }
+.fact-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.fact-val { font-size: 0.95rem; color: var(--ink); font-weight: 500; }
+
+/* PUBS */
+.pub-item { border-left: 2px solid var(--teal-light); padding: 1.25rem 1.5rem; background: #fff; border-radius: 0 12px 12px 0; transition: border-color 0.2s; }
+.pub-item + .pub-item { margin-top: 0.85rem; }
+.pub-item:hover { border-color: var(--teal); }
+.pub-tag { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); font-weight: 500; margin-bottom: 0.4rem; }
+.pub-title { font-size: 0.95rem; color: var(--ink); font-weight: 500; margin-bottom: 0.25rem; line-height: 1.4; }
+.pub-venue { font-size: 0.82rem; color: var(--muted); }
+.pub-authors { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* PILLAR */
+.pillar { background: #fff; border-radius: 16px; padding: 1.75rem 1.5rem; border: 1px solid var(--border); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.pillar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal); }
+.pillar-num { font-family: "DM Serif Display", serif; font-size: 3rem; color: var(--teal-light); line-height: 1; margin-bottom: 0.5rem; }
+.pillar-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
+.pillar h3 { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; }
+.pillar p { font-size: 0.88rem; color: var(--soft); font-weight: 300; flex: 1; }
+.pillar-tag { display: inline-block; margin-top: 1rem; font-size: 0.7rem; padding: 0.2rem 0.65rem; border-radius: 2rem; background: var(--teal-light); color: var(--teal-mid); font-weight: 500; align-self: flex-start; }
+
+/* CHALLENGE CARDS */
+.challenge-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.5rem; transition: background 0.2s; }
+.challenge-card:hover { background: rgba(255,255,255,0.1); }
+.challenge-year { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
+.challenge-name { font-size: 0.93rem; font-weight: 500; color: #fff; margin-bottom: 0.35rem; line-height: 1.4; }
+.challenge-role { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+.skill-pill { font-size: 0.78rem; padding: 0.35rem 1rem; border-radius: 2rem; border: 1px solid rgba(14,159,126,0.4); color: var(--teal); background: rgba(14,159,126,0.08); font-weight: 400; }
+.pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
+
+/* GALLERY */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.gallery-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(20,20,40,0.82)); color: #fff; font-size: 0.8rem; padding: 1.5rem 1rem 0.75rem; }
+.gallery-country { font-size: 0.68rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* DARK SECTION */
+.dark-section { background: var(--ink); color: #fff; padding: 4rem 2rem; margin: 3rem -2rem 0; border-radius: 20px; }
+.dark-section .section-label { color: var(--teal); }
+.dark-section h2 { color: #fff; }
+.dark-section p { color: rgba(255,255,255,0.7); font-weight: 300; }
+.noh-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.noh-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.noh-photos img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
+.noh-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(14,159,126,0.2); border: 1px solid var(--teal); color: var(--teal); font-size: 0.82rem; padding: 0.4rem 1rem; border-radius: 2rem; margin-top: 0.75rem; font-weight: 500; }
+
+/* CONTACT LINKS */
+.contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: var(--ink); transition: all 0.2s; font-size: 0.9rem; }
+.contact-link:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+.contact-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+
+/* HOME HERO */
+.hero-wrap { display: flex; align-items: center; gap: 4rem; min-height: calc(100vh - 64px); padding: 3rem 2rem; max-width: 1000px; margin: 0 auto; }
+.hero-photo { width: 280px; height: 340px; flex-shrink: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(30,30,60,0.15); border: 4px solid white; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.hero-stat { display: flex; gap: 2rem; margin-top: 2rem; }
+.stat { }
+.stat-num { font-family: "DM Serif Display", serif; font-size: 2rem; color: var(--teal); line-height: 1; }
+.stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* PAGE HEADER BAND */
+.page-header { background: var(--cream); border-bottom: 1px solid var(--border); padding: 3rem 2rem 2.5rem; }
+.page-header-inner { max-width: 900px; margin: 0 auto; }
+
+footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem; }
+
+@media (max-width: 780px) {
+  .hamburger { display: block; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(250,250,247,0.98); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); gap: 0.25rem; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.6rem 1rem; }
+  .hero-wrap { flex-direction: column-reverse; gap: 2rem; padding-top: 2rem; min-height: auto; }
+  .hero-photo { width: 160px; height: 200px; }
+  .grid-2, .grid-3, .noh-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .noh-photos { grid-template-columns: 1fr 1fr; }
+  .dark-section { margin: 3rem -1rem 0; border-radius: 12px; }
+  .hero-stat { gap: 1.5rem; }
+}
+</style>
+
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-name">S. Shamma Alia</a>
+  <div class="nav-links"><a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="leadership.html">Leadership</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="projects.html" class="active">Projects</a>
+<a href="beyond.html">Beyond Research</a>
+<a href="contact.html">Contact</a>
+</div>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-label">Projects & experience</div>
+    <h1>Research in practice</h1>
+  </div>
+</div>
+<div class="page">
+  <div class="grid-2" style="margin-bottom:3rem;">
+    <div class="card">
+      <h3>Office workers' behavior prediction</h3>
+      <p>Analyzed data from Fitbit, Omron accelerometers, and questionnaires to predict employee behavioral patterns across multiple companies. Responsible for data preprocessing, feature engineering, and model evaluation.</p>
+      <div class="tags"><span class="tag">R</span><span class="tag">Wearables</span><span class="tag">Multi-modal data</span><span class="tag">Behavior prediction</span></div>
+    </div>
+    <div class="card">
+      <h3>Weather prediction at scale</h3>
+      <p>Handled large historical weather datasets on Google AI Platform. Led the interpolation and Kriging spatial analysis components for regional weather forecasting — including managing the platform infrastructure.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Google Cloud</span><span class="tag">Big Data</span><span class="tag">Spatial analysis</span></div>
+    </div>
+    <div class="card">
+      <h3>Nurse activity recognition — SICU</h3>
+      <p>Managed a team working on activity recognition of hospital nurses in the Surgical ICU using multiple sensor modalities. Responsible for team coordination, data collection planning, and analysis pipeline.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Team lead</span><span class="tag">Healthcare</span><span class="tag">Multi-sensor</span></div>
+    </div>
+    <div class="card">
+      <h3>Doctors' activity recognition</h3>
+      <p>Led a team developing activity recognition models for doctors using wearable sensors — an ongoing project extending the nurse-care challenge methodology to physicians.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Team lead</span><span class="tag">Healthcare AI</span></div>
+    </div>
+    <div class="card">
+      <h3>MCoMat: Performance metric for imbalanced datasets</h3>
+      <p>Designed a novel evaluation metric specifically for multi-layer activity recognition datasets with class imbalance — a fundamental and underaddressed problem in real-world sensor data evaluation.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Evaluation metrics</span><span class="tag">Imbalanced data</span></div>
+    </div>
+    <div class="card">
+      <h3>Hospital localization with iBeacon</h3>
+      <p>Built a localization system using Bluetooth Low Energy beacon data collected in a Japanese hospital — enabling indoor positioning of care workers across floors and departments.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">BLE</span><span class="tag">Indoor positioning</span></div>
+    </div>
+  </div>
+
+  <h2 style="margin-bottom:1.25rem;">Earlier projects</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Access Control Portal</h3>
+      <p>Designed and developed an enterprise access control web application during an internship at bKash Limited, Bangladesh's leading mobile financial service.</p>
+      <div class="tags"><span class="tag">JavaEE</span><span class="tag">GlassFish</span><span class="tag">Enterprise</span></div>
+    </div>
+    <div class="card">
+      <h3>Human Resource Management System</h3>
+      <p>Full-stack web application for managing employee records and HR operations, built during undergraduate studies.</p>
+      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">jQuery</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2025 Sayeda Shamma Alia · Concordia University, Montréal</footer>
+</body>
+</html>
