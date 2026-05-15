@@ -24,8 +24,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
 
 .page { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
-.page-wide { max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
-
 .section-label { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--teal); text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
 .section-label::before { content: ""; display: block; width: 1.5rem; height: 1px; background: var(--teal); }
 h1 { font-family: "DM Serif Display", serif; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.15; color: var(--ink); margin-bottom: 1rem; }
@@ -33,13 +31,10 @@ h1 em { font-style: italic; color: var(--teal); }
 h2 { font-family: "DM Serif Display", serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--ink); margin-bottom: 1rem; }
 h3 { font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
 p.lead { font-size: 1.05rem; color: var(--soft); font-weight: 300; line-height: 1.85; margin-bottom: 1rem; max-width: 640px; }
-
 .btn-primary { display: inline-block; background: var(--ink); color: #fff; padding: 0.75rem 1.75rem; border-radius: 2rem; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
 .btn-primary:hover { background: var(--teal); }
 .btn-outline { display: inline-block; border: 1px solid var(--border); color: var(--soft); padding: 0.75rem 1.75rem; border-radius: 2rem; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; }
 .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
-
-/* CARDS */
 .card { background: #fff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border); }
 .card h3 { margin-bottom: 0.5rem; }
 .card p { font-size: 0.9rem; color: var(--soft); font-weight: 300; }
@@ -47,13 +42,9 @@ p.lead { font-size: 1.05rem; color: var(--soft); font-weight: 300; line-height: 
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-
-/* FACT CARDS */
 .fact-card { background: var(--cream); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid var(--border); }
 .fact-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 0.25rem; }
 .fact-val { font-size: 0.95rem; color: var(--ink); font-weight: 500; }
-
-/* PUBS */
 .pub-item { border-left: 2px solid var(--teal-light); padding: 1.25rem 1.5rem; background: #fff; border-radius: 0 12px 12px 0; transition: border-color 0.2s; }
 .pub-item + .pub-item { margin-top: 0.85rem; }
 .pub-item:hover { border-color: var(--teal); }
@@ -61,8 +52,6 @@ p.lead { font-size: 1.05rem; color: var(--soft); font-weight: 300; line-height: 
 .pub-title { font-size: 0.95rem; color: var(--ink); font-weight: 500; margin-bottom: 0.25rem; line-height: 1.4; }
 .pub-venue { font-size: 0.82rem; color: var(--muted); }
 .pub-authors { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
-
-/* PILLAR */
 .pillar { background: #fff; border-radius: 16px; padding: 1.75rem 1.5rem; border: 1px solid var(--border); position: relative; overflow: hidden; display: flex; flex-direction: column; }
 .pillar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal); }
 .pillar-num { font-family: "DM Serif Display", serif; font-size: 3rem; color: var(--teal-light); line-height: 1; margin-bottom: 0.5rem; }
@@ -70,54 +59,37 @@ p.lead { font-size: 1.05rem; color: var(--soft); font-weight: 300; line-height: 
 .pillar h3 { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; }
 .pillar p { font-size: 0.88rem; color: var(--soft); font-weight: 300; flex: 1; }
 .pillar-tag { display: inline-block; margin-top: 1rem; font-size: 0.7rem; padding: 0.2rem 0.65rem; border-radius: 2rem; background: var(--teal-light); color: var(--teal-mid); font-weight: 500; align-self: flex-start; }
-
-/* CHALLENGE CARDS */
 .challenge-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.5rem; transition: background 0.2s; }
 .challenge-card:hover { background: rgba(255,255,255,0.1); }
 .challenge-year { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
 .challenge-name { font-size: 0.93rem; font-weight: 500; color: #fff; margin-bottom: 0.35rem; line-height: 1.4; }
 .challenge-role { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-.skill-pill { font-size: 0.78rem; padding: 0.35rem 1rem; border-radius: 2rem; border: 1px solid rgba(14,159,126,0.4); color: var(--teal); background: rgba(14,159,126,0.08); font-weight: 400; }
+.skill-pill { font-size: 0.78rem; padding: 0.35rem 1rem; border-radius: 2rem; border: 1px solid rgba(14,159,126,0.4); color: var(--teal-mid); background: var(--teal-light); font-weight: 400; }
 .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
-
-/* GALLERY */
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
 .gallery-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
 .gallery-item:hover img { transform: scale(1.05); }
 .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(20,20,40,0.82)); color: #fff; font-size: 0.8rem; padding: 1.5rem 1rem 0.75rem; }
 .gallery-country { font-size: 0.68rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.1em; }
-
-/* DARK SECTION */
 .dark-section { background: var(--ink); color: #fff; padding: 4rem 2rem; margin: 3rem -2rem 0; border-radius: 20px; }
 .dark-section .section-label { color: var(--teal); }
 .dark-section h2 { color: #fff; }
-.dark-section p { color: rgba(255,255,255,0.7); font-weight: 300; }
 .noh-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 .noh-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 .noh-photos img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
 .noh-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(14,159,126,0.2); border: 1px solid var(--teal); color: var(--teal); font-size: 0.82rem; padding: 0.4rem 1rem; border-radius: 2rem; margin-top: 0.75rem; font-weight: 500; }
-
-/* CONTACT LINKS */
 .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: var(--ink); transition: all 0.2s; font-size: 0.9rem; }
 .contact-link:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
 .contact-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-
-/* HOME HERO */
 .hero-wrap { display: flex; align-items: center; gap: 4rem; min-height: calc(100vh - 64px); padding: 3rem 2rem; max-width: 1000px; margin: 0 auto; }
 .hero-photo { width: 280px; height: 340px; flex-shrink: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(30,30,60,0.15); border: 4px solid white; }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
-.hero-stat { display: flex; gap: 2rem; margin-top: 2rem; }
-.stat { }
 .stat-num { font-family: "DM Serif Display", serif; font-size: 2rem; color: var(--teal); line-height: 1; }
 .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
-
-/* PAGE HEADER BAND */
 .page-header { background: var(--cream); border-bottom: 1px solid var(--border); padding: 3rem 2rem 2.5rem; }
 .page-header-inner { max-width: 900px; margin: 0 auto; }
-
 footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem; }
-
 @media (max-width: 780px) {
   .hamburger { display: block; }
   .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(250,250,247,0.98); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); gap: 0.25rem; }
@@ -129,106 +101,60 @@ footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--mute
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .noh-photos { grid-template-columns: 1fr 1fr; }
   .dark-section { margin: 3rem -1rem 0; border-radius: 12px; }
-  .hero-stat { gap: 1.5rem; }
 }
 </style>
 
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-name">S. Shamma Alia</a>
-  <div class="nav-links"><a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="leadership.html" class="active">Leadership</a>
-<a href="research.html">Research</a>
-<a href="publications.html">Publications</a>
-<a href="projects.html">Projects</a>
-<a href="beyond.html">Beyond Research</a>
-<a href="contact.html">Contact</a>
+  <a href="/sayeda_shamma_alia/index.html" class="nav-name">S. Shamma Alia</a>
+  <div class="nav-links"><a href="/sayeda_shamma_alia/index.html">Home</a>
+<a href="/sayeda_shamma_alia/about.html">About</a>
+<a href="/sayeda_shamma_alia/leadership.html" class="active">Leadership</a>
+<a href="/sayeda_shamma_alia/research.html">Research</a>
+<a href="/sayeda_shamma_alia/publications.html">Publications</a>
+<a href="/sayeda_shamma_alia/projects.html">Projects</a>
+<a href="/sayeda_shamma_alia/beyond.html">Beyond Research</a>
+<a href="/sayeda_shamma_alia/contact.html">Contact</a>
 </div>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 </nav>
 
-<div class="page-header" style="background:var(--ink);">
-  <div class="page-header-inner">
-    <div class="section-label" style="color:var(--teal);">Leadership & collaboration</div>
-    <h1 style="color:#fff;">Organizing international<br><em>research challenges</em></h1>
-    <p style="color:rgba(255,255,255,0.65);font-weight:300;max-width:640px;margin-top:0.5rem;font-size:1rem;line-height:1.85;">Between 2019 and 2021, I organized and co-organized five international activity recognition challenges at premier venues including UbiComp — the world-leading conference on pervasive computing. Each challenge brought together researchers from multiple countries, required cross-cultural coordination, and resulted in a peer-reviewed publication.</p>
-  </div>
-</div>
+<div class="page-header" style="background:var(--ink);"><div class="page-header-inner">
+  <div class="section-label" style="color:var(--teal);">Leadership & collaboration</div>
+  <h1 style="color:#fff;">Organizing international<br><em>research challenges</em></h1>
+  <p style="color:rgba(255,255,255,0.65);font-weight:300;max-width:640px;margin-top:0.5rem;font-size:1rem;line-height:1.85;">Between 2019 and 2021, I organized and co-organized five international activity recognition challenges at premier venues including UbiComp. Each challenge brought together researchers from multiple countries and resulted in a peer-reviewed publication.</p>
+</div></div>
 <div class="page">
-  <div class="grid-3" style="margin-bottom:2rem;">
-    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">🌍</div>
-      <h3>Cross-cultural leadership</h3>
-      <p>Coordinated teams of researchers from Japan, France, and beyond — managing communication across languages, time zones, and academic cultures.</p>
-    </div>
-    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">📊</div>
-      <h3>Dataset curation & management</h3>
-      <p>Prepared, validated, and distributed real-world sensor datasets to participating teams worldwide, ensuring data quality under tight timelines.</p>
-    </div>
-    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">📝</div>
-      <h3>Publishing challenge results</h3>
-      <p>Each challenge produced a peer-reviewed publication summarizing methodology, participating teams, and comparative results.</p>
-    </div>
+  <div class="grid-3" style="margin-bottom:2.5rem;">
+    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;"><div style="font-size:2rem;margin-bottom:0.5rem;">🌍</div><h3>Cross-cultural leadership</h3><p>Coordinated teams of researchers from Japan, France, and beyond — managing communication across languages, time zones, and academic cultures.</p></div>
+    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;"><div style="font-size:2rem;margin-bottom:0.5rem;">📊</div><h3>Dataset curation</h3><p>Prepared, validated, and distributed real-world sensor datasets to participating teams worldwide, ensuring data quality under tight timelines.</p></div>
+    <div class="card" style="border-top:3px solid var(--teal);border-radius:0 0 16px 16px;"><div style="font-size:2rem;margin-bottom:0.5rem;">📝</div><h3>Publishing results</h3><p>Each challenge produced a peer-reviewed publication summarizing methodology, participating teams, and comparative results.</p></div>
   </div>
-
   <h2 style="margin-bottom:1.5rem;">Challenges organized</h2>
-  <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;">
-    <div class="pub-item">
-      <div class="pub-tag">2021 · UbiComp / ISWC</div>
-      <div class="pub-title">3rd Nurse Care Activity Recognition Challenge — Field Data Edition</div>
-      <div class="pub-venue">Organizer · Real-world hospital sensor data from SICU nursing staff</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-tag">2021 · UbiComp / ISWC</div>
-      <div class="pub-title">Bento Packaging Activity Recognition Challenge</div>
-      <div class="pub-venue">Organizer · Industrial assembly activity recognition dataset</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-tag">2021 · HASCA Workshop</div>
-      <div class="pub-title">Cooking Activity Recognition Challenge</div>
-      <div class="pub-venue">Organizer · Multi-sensor kitchen environment dataset</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-tag">2020 · UbiComp / ISWC</div>
-      <div class="pub-title">2nd Nurse Care Activity Recognition Challenge — Lab and Field Data</div>
-      <div class="pub-venue">Organizer · Combined controlled-lab and real-world setting</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-tag">2019 · UbiComp / ISWC</div>
-      <div class="pub-title">1st Nurse Care Activity Recognition Challenge</div>
-      <div class="pub-venue">Co-organizer · Inaugural edition, establishing the benchmark</div>
-    </div>
+  <div style="margin-bottom:3rem;">
+    <div class="pub-item"><div class="pub-tag">2021 · UbiComp / ISWC</div><div class="pub-title">3rd Nurse Care Activity Recognition Challenge — Field Data Edition</div><div class="pub-venue">Organizer · Real-world hospital sensor data from SICU nursing staff</div></div>
+    <div class="pub-item"><div class="pub-tag">2021 · UbiComp / ISWC</div><div class="pub-title">Bento Packaging Activity Recognition Challenge</div><div class="pub-venue">Organizer · Industrial assembly activity recognition dataset</div></div>
+    <div class="pub-item"><div class="pub-tag">2021 · HASCA Workshop</div><div class="pub-title">Cooking Activity Recognition Challenge</div><div class="pub-venue">Organizer · Multi-sensor kitchen environment dataset</div></div>
+    <div class="pub-item"><div class="pub-tag">2020 · UbiComp / ISWC</div><div class="pub-title">2nd Nurse Care Activity Recognition Challenge — Lab and Field Data</div><div class="pub-venue">Organizer · Combined controlled-lab and real-world setting</div></div>
+    <div class="pub-item"><div class="pub-tag">2019 · UbiComp / ISWC</div><div class="pub-title">1st Nurse Care Activity Recognition Challenge</div><div class="pub-venue">Co-organizer · Inaugural edition, establishing the benchmark</div></div>
   </div>
-
   <h2 style="margin-bottom:1rem;">Community service</h2>
   <div class="grid-2" style="margin-bottom:2.5rem;">
-    <div class="card">
-      <div style="font-size:0.75rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">2023 · UbiComp</div>
-      <h3>Conference Volunteer</h3>
-      <p>Supported conference operations at UbiComp 2023 — one of the premier international venues for pervasive and ubiquitous computing research.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:0.75rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">2021 · UbiComp</div>
-      <h3>Conference Volunteer</h3>
-      <p>Volunteered at UbiComp 2021, contributing to session facilitation and helping international attendees navigate the event.</p>
-    </div>
+    <div class="card"><div style="font-size:0.75rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">2023 · UbiComp</div><h3>Conference Volunteer</h3><p>Supported conference operations at UbiComp 2023 — one of the premier international venues for pervasive and ubiquitous computing research.</p></div>
+    <div class="card"><div style="font-size:0.75rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;">2021 · UbiComp</div><h3>Conference Volunteer</h3><p>Volunteered at UbiComp 2021, contributing to session facilitation and helping international attendees navigate the event.</p></div>
   </div>
-
   <h2 style="margin-bottom:1rem;">Skills demonstrated</h2>
   <div class="pills">
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Cross-cultural leadership</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">International team coordination</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Project management</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Dataset curation</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Peer-reviewed publishing</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Stress management</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Scientific communication</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Deadline-driven delivery</span>
-    <span class="skill-pill" style="color:var(--teal-mid);border-color:var(--teal);background:var(--teal-light);">Community building</span>
+    <span class="skill-pill">Cross-cultural leadership</span>
+    <span class="skill-pill">International team coordination</span>
+    <span class="skill-pill">Project management</span>
+    <span class="skill-pill">Dataset curation</span>
+    <span class="skill-pill">Peer-reviewed publishing</span>
+    <span class="skill-pill">Stress management</span>
+    <span class="skill-pill">Scientific communication</span>
+    <span class="skill-pill">Deadline-driven delivery</span>
+    <span class="skill-pill">Community building</span>
   </div>
 </div>
 
